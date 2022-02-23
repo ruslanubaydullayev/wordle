@@ -19,6 +19,7 @@
     </div>
 
 
+
   </div>
 </template>
 
@@ -65,9 +66,13 @@
     },
     created() {
       function enterPress(e) {
-        console.log('mounted');
         if (e.keyCode == 13) {
-          this.submit();
+          if(this.guess.length != 5){
+            alert('So\'z 5 harfli bo\'lishi kerak!');
+          } 
+          else {
+            this.submit();
+          }
         }
       }
     },
