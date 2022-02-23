@@ -1,0 +1,108 @@
+$char-w: 1ch;
+$gap: 0.5*$char-w;
+$n-char: 5;
+$in-w: $n-char*($char-w + $gap);
+
+.input {
+  display: block;
+  text-transform: uppercase;
+  margin: 2em auto;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: $in-w;
+  color: rgb(45, 13, 117);
+  background: repeating-linear-gradient(90deg,
+  rgb(45, 13, 117) 0, rgb(45, 13, 117) $char-w,
+    transparent 0, transparent $char-w + $gap) 0 100%/ #{$in-w - $gap} 2px no-repeat;
+  font: 5ch droid sans mono, consolas, monospace;
+  letter-spacing: $gap;
+
+  &:focus {
+    outline: none;
+    color: rgb(45, 13, 117);
+  }
+}
+
+.content {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 19px;
+    right: -20px;
+    outline: none;
+    svg {
+        path {
+            fill: rgb(45, 13, 117);
+        }
+    }
+}
+
+
+.is_green {
+
+  background: #6AAA64;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  user-select: none;
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  margin: 3px;
+}
+
+.is_yellow {
+  background: #C9B458;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  user-select: none;
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  margin: 3px;
+}
+
+.is_gray {
+  background: #787C7E;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  user-select: none;
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  margin: 3px;
+}
+
+// body {
+//     background: #9D50BB;  /* fallback for old browsers */
+//     background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
+//     background: linear-gradient(to right, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// }
