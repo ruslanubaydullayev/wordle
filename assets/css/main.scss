@@ -3,6 +3,38 @@ $gap: 0.5*$char-w;
 $n-char: 5;
 $in-w: $n-char*($char-w + $gap);
 
+.header {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // header__icon
+  &__icon {
+    max-width: 24px;
+    height: 24px;
+    path {
+      fill: #787C7E !important;
+    }
+  }
+
+  // header__brand
+  .header__brand {
+    font-family: Cera Pro;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2d0d75;
+  }
+
+
+}
+
+
 .input {
   display: block;
   text-transform: uppercase;
@@ -35,6 +67,7 @@ $in-w: $n-char*($char-w + $gap);
     top: 19px;
     right: -20px;
     outline: none;
+    transition: all 0.3s;
     svg {
         path {
             fill: rgb(45, 13, 117);
@@ -101,11 +134,9 @@ $in-w: $n-char*($char-w + $gap);
   margin: 3px;
 }
 
-// body {
-//     background: #9D50BB;  /* fallback for old browsers */
-//     background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
-//     background: linear-gradient(to right, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-// }
+body {
+    background: linear-gradient(to right, #ebebeb, #ebebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 
 // ==============================MODALKA=====================================>
