@@ -85,6 +85,7 @@
   //  4) so'zlar kerak
   //  5) validation qoyish
   //  6) 6 ta imkoniyat berish
+  //  7) xato ishlayapti
 
 
 </script>
