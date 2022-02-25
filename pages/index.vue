@@ -104,18 +104,20 @@
     },
     methods: {
 
-      submit() {
+       submit() {
         const solution = 'ertak' // solution bu kun so'zi
+        const ob = {} 
 
         for (let i = 0; i < this.guess.length; i++) {
           let guessLetter = this.guess.charAt(i);
           let solutionLetter = solution.charAt(i);
 
           if (guessLetter === solutionLetter) {
+            ob[guessLetter] = 1 
             document.getElementById('answers').innerHTML += '<span class="is_green">' + this.guess.charAt(i) +
               '</span>';
-
-          } else if (solution.indexOf(guessLetter) != -1 && guessLetter !== solutionLetter) {
+          } else if (solution.includes(guessLetter) &&  !ob[guessLetter]) {
+            ob[guessLetter] = 1 
             document.getElementById('answers').innerHTML += '<span class="is_yellow">' + this.guess.charAt(i) +
               '</span>';
           } else {
@@ -125,6 +127,7 @@
 
           }
         }
+      },
       },
 
       clearInput() {
