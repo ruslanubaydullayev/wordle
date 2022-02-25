@@ -38,7 +38,7 @@ $in-w: $n-char*($char-w + $gap);
 .input {
   display: block;
   text-transform: uppercase;
-  margin: 2em auto;
+  margin: 10px auto;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -55,6 +55,14 @@ $in-w: $n-char*($char-w + $gap);
     color: rgb(45, 13, 117);
   }
 }
+
+.notif--error {
+    font-size: 13px;
+    font-weight: 600;
+    color: #756bab;
+    font-family: 'Cera Pro';
+}
+
 
 .content {
     position: relative;

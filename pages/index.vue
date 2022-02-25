@@ -33,6 +33,9 @@
           </svg>
         </button>
 
+        <div id="forNotif"></div>
+
+
 
         <modal v-bind="{
           title: this.$t('game_conditions'),
@@ -105,8 +108,28 @@
     methods: {
 
       submit() {
-        const solution = 'ertak' // solution bu kun so'zi
 
+        const words = ['hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar', 'raqib', 'rohib', 'ablah', 'qotil', 'lozim', 'biroq', 'shart', 'sabab', 'iqror', 'maqol', 'ibora', 'kalom', 'solih', 'ixlos', 'madad', 'anjir', 'matoh']  
+
+        // const solution = words[Math.floor(Math.random() * words.length)] // solution bu kun so'zi
+        const solution = 'qalam' // solution bu kun so'zi
+        
+
+
+        const inp = document.getElementsByClassName('input')  
+
+
+        if(this.guess.length < 5){
+           this.guess = '';
+           this.$refs.nameInput.focus();
+           document.getElementById('forNotif').innerHTML = '<div class="notif notif--error">'+ this.$t('less_5') +'</div>';
+           document.getElementById('forNotif').style.opacity = '1';
+
+        }
+
+        else {
+
+        document.getElementById('forNotif').style.opacity = '0';
         for (let i = 0; i < this.guess.length; i++) {
           let guessLetter = this.guess.charAt(i);
           let solutionLetter = solution.charAt(i);
@@ -125,6 +148,8 @@
 
           }
         }
+      }
+          this.guess = '';  
       },
 
       clearInput() {
