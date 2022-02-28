@@ -28,7 +28,7 @@ $in-w: $n-char*($char-w + $gap);
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     text-align: center;
-    color: #2d0d75;
+    color: #FFF;
   }
 
 
@@ -43,23 +43,23 @@ $in-w: $n-char*($char-w + $gap);
   padding: 0;
   cursor: pointer;
   width: $in-w;
-  color: rgb(45, 13, 117);
+  color: rgb(255, 255, 255);
   background: repeating-linear-gradient(90deg,
-  rgb(45, 13, 117) 0, rgb(45, 13, 117) $char-w,
+  rgb(255, 255, 255) 0, rgb(255, 255, 255) $char-w,
     transparent 0, transparent $char-w + $gap) 0 100%/ #{$in-w - $gap} 2px no-repeat;
   font: 5ch droid sans mono, consolas, monospace;
   letter-spacing: $gap;
 
   &:focus {
     outline: none;
-    color: rgb(45, 13, 117);
+    color: rgb(255, 255, 255);
   }
 }
 
 .notif--error {
     font-size: 13px;
     font-weight: 600;
-    color: #756bab;
+    color: #FFF;
     font-family: 'Cera Pro';
 }
 
@@ -78,7 +78,7 @@ $in-w: $n-char*($char-w + $gap);
     transition: all 0.3s;
     svg {
         path {
-            fill: rgb(45, 13, 117);
+            fill: rgb(255, 255, 255);
         }
     }
 }
@@ -143,7 +143,7 @@ $in-w: $n-char*($char-w + $gap);
 }
 
 body {
-    background: linear-gradient(to right, #ebebeb, #ebebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #212529; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -247,6 +247,21 @@ body {
     max-width: 200px;
     height: auto;
     margin: 10px auto 0;
+  }
+}
+
+.word-found {
+  &__btn {
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    height: 50px; 
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
 }
 
