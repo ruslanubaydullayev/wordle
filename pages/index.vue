@@ -133,7 +133,7 @@
         const words = ['hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar','hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar','hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar', 'raqib', 'rohib', 'ablah', 'qotil', 'lozim', 'biroq', 'shart', 'sabab', 'iqror', 'maqol', 'ibora', 'kalom', 'solih', 'ixlos', 'madad', 'anjir', 'matoh']  
 
         // const solution = words[Math.floor(Math.random() * words.length)] // solution bu kun so'zi
-        let solution = 'baliq' // solution bu kun so'zi
+        let solution = 'armon' // solution bu kun so'zi
         
         
 
@@ -170,7 +170,10 @@
           } else if (solution.indexOf(guessLetter) != -1 && guessLetter !== solutionLetter) {
             document.getElementById('answers').innerHTML += '<span class="is_yellow">' + this.guess.charAt(i) +
               '</span>';
-          } else {
+          } 
+
+
+          else {
             // console.log(this.guess.charAt(i) + ' is grey');
             document.getElementById('answers').innerHTML += '<span class="is_gray">' + this.guess.charAt(i) +
               '</span>';
