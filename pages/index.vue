@@ -125,6 +125,9 @@
       }
     },
 
+    beforeCreate() {
+      console.log('beforeCreate')
+    },
 
     methods: {
 
@@ -196,18 +199,9 @@
         this.$refs.nameInput.focus();
 
 
-      }
-    },
-    created() {
-      function enterPress(e) {
-        if (e.keyCode == 13) {
-          if (this.guess.length != 5) {
-            alert('So\'z 5 harfli bo\'lishi kerak!');
-          } else {
-            this.submit();
-          }
-        }
-      }
+      },
+
+    randomWord() {
       const ya = ["abbat","abgor","abdol","abyot","abjad","abjaq","abjir","abzal","abzas","abira","ablaq","ablah",
     "abort","abxaz","avaÇµa","avans","avara","avval","avizo","avlod","avloq","avrat","avrod","avroq","avron",
     "avsat","avtol","avtor","agent","agrar","aÇµyor","adasi","adash","adyol","adiba","adoyi","adras","adres",
@@ -472,6 +466,24 @@
     "yasli","yasov","yasoq","yassi","yaxna","yaxob","yaxta",
     
     ]
+    
+    }
+
+    },
+    created() {
+      function enterPress(e) {
+        if (e.keyCode == 13) {
+          if (this.guess.length != 5) {
+            alert('So\'z 5 harfli bo\'lishi kerak!');
+          } else {
+            this.submit();
+          }
+        }
+      }
+
+   
+
+    
 
     }
   }
