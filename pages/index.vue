@@ -136,7 +136,7 @@
         const words = ['hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar','hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar','hazar', 'jamol', 'ariza', 'baliq', 'qorin', 'ajdar', 'raqib', 'rohib', 'ablah', 'qotil', 'lozim', 'biroq', 'shart', 'sabab', 'iqror', 'maqol', 'ibora', 'kalom', 'solih', 'ixlos', 'madad', 'anjir', 'matoh']  
 
         // const solution = words[Math.floor(Math.random() * words.length)] // solution bu kun so'zi
-        let solution = 'armon' // solution bu kun so'zi
+        let solution = 'qalam' // solution bu kun so'zi
         
         
 

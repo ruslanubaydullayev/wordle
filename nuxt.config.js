@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: false,
   head: {
-    title: "ME",
+    title: "Kun so'zini toping",
     htmlAttrs: {
       lang: 'uz'
     },  
